@@ -1,0 +1,283 @@
+/* Site Stylesheet
+  1. Variables and Mixins
+  2. Global Styles
+  3. Typography Styles
+  4. Structure Styles
+  5. Module Styles
+  6. Component Styles
+  7. Page Styles
+  8. Media Queries
+======================================== */
+/* 1. Variables and Mixins
+======================================== */
+/* 2. Global Styles
+======================================== */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  margin: 0 auto;
+  overflow-x: hidden;
+  width: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0 auto;
+  overflow-x: hidden;
+  width: 98%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* 3. Typography Styles
+======================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.25;
+  margin-bottom: 2px;
+  -webkit-transition: font-size 0.25s ease;
+  transition: font-size 0.25s ease;
+}
+
+h1 {
+  font-family: 'Abril Fatface', Helvetica, sans-serif;
+  display: inline-block;
+  font-size: 48px;
+  margin-top: 10px;
+  letter-spacing: 0.05em;
+}
+
+/* 4. Structure Styles
+======================================== */
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.a .overlay {
+  background-color: #1d70b7;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.b .overlay {
+  background-color: #e6332a;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.c .overlay {
+  background-color: #00a09a;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.d .overlay {
+  background-color: #e84e1b;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.e .overlay {
+  background-color: #008d36;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.f .overlay {
+  background-color: #f9b233;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+/* 5. Modules Styles
+======================================== */
+header::after {
+  content: ' ';
+  border-bottom: 4px solid black;
+  display: block;
+}
+
+.shapes {
+  display: inline-block;
+}
+
+.shapes div {
+  margin-right: 0.4em;
+}
+
+.square {
+  background-color: black;
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  margin-left: 1em;
+}
+
+.circle {
+  background-color: black;
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  border-style: solid;
+  border-width: 0 0.9em 1.4em 0.9em;
+  border-color: transparent transparent black transparent;
+}
+
+#main {
+  margin: 1em 0;
+}
+
+.half {
+  float: left;
+  width: 50%;
+}
+
+.left {
+  padding-right: .5em;
+}
+
+.right {
+  padding-left: .5em;
+}
+
+.project {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.project .overlay:hover {
+  opacity: 0;
+}
+
+.collapsible {
+  cursor: pointer;
+}
+
+.title {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'futura', Arial, serif;
+  letter-spacing: .1em;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  font-size: 2.2vw;
+  margin: 0;
+  font-weight: 500;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+.content p {
+  line-height: 1.4;
+}
+
+footer {
+  display: block;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+/* 6. Component Styles
+======================================== */
+/* 7. Page Styles
+======================================== */
+/* 8. Media Queries
+======================================== */
+@media (max-width: 720px) {
+  .half {
+    width: 100%;
+    clear: both;
+  }
+  .left,
+  .right {
+    padding: 0;
+  }
+  .right:first-child {
+    margin-top: 0;
+  }
+  .title {
+    font-size: 1.5em;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
