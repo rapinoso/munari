@@ -1,283 +1,148 @@
-/* Site Stylesheet
-  1. Variables and Mixins
-  2. Global Styles
-  3. Typography Styles
-  4. Structure Styles
-  5. Module Styles
-  6. Component Styles
-  7. Page Styles
-  8. Media Queries
-======================================== */
-/* 1. Variables and Mixins
-======================================== */
-/* 2. Global Styles
-======================================== */
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+:root {
+  box-sizing: border-box;
 }
-
-html {
-  margin: 0 auto;
-  overflow-x: hidden;
-  width: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
-  margin: 0 auto;
-  overflow-x: hidden;
-  width: 98%;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+  font-size: 100%;
   font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-/* 3. Typography Styles
-======================================== */
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.25;
-  margin-bottom: 2px;
+h3 {
   -webkit-transition: font-size 0.25s ease;
   transition: font-size 0.25s ease;
 }
 
 h1 {
-  font-family: 'Abril Fatface', Helvetica, sans-serif;
-  display: inline-block;
-  font-size: 48px;
-  margin-top: 10px;
-  letter-spacing: 0.05em;
-}
-
-/* 4. Structure Styles
-======================================== */
-img {
-  max-width: 100%;
-  display: block;
-  height: auto;
-}
-
-.a .overlay {
-  background-color: #1d70b7;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 1;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}
-
-.b .overlay {
-  background-color: #e6332a;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 1;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}
-
-.c .overlay {
-  background-color: #00a09a;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 1;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}
-
-.d .overlay {
-  background-color: #e84e1b;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 1;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}
-
-.e .overlay {
-  background-color: #008d36;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 1;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}
-
-.f .overlay {
-  background-color: #f9b233;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 1;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}
-
-/* 5. Modules Styles
-======================================== */
-header::after {
-  content: ' ';
-  border-bottom: 4px solid black;
-  display: block;
-}
-
-.shapes {
-  display: inline-block;
-}
-
-.shapes div {
-  margin-right: 0.4em;
-}
-
-.square {
+  font-size: 2em;
+  margin: 0;
   background-color: black;
-  width: 1.5em;
-  height: 1.5em;
+  color: white;
+  padding: 5px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.125em;
+}
+
+p {
+  font-size: 1em;
+}
+nav {
+  padding: 10px;
+  background-color: yellow;
+}
+
+ul {
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  /* list-style-type: none; */
   display: inline-block;
-  margin-left: 1em;
+  padding: 0px 10px;
 }
 
-.circle {
-  background-color: black;
-  width: 1.5em;
-  height: 1.5em;
-  display: inline-block;
-  border-radius: 50%;
+li > a {
+  text-decoration: none;
 }
 
-.triangle {
-  width: 0;
-  height: 0;
-  display: inline-block;
-  border-style: solid;
-  border-width: 0 0.9em 1.4em 0.9em;
-  border-color: transparent transparent black transparent;
+footer {
+  position: relative;
+  width: 100%;
+  background: #6cf;
+  padding: 10px 5px;
 }
 
-#main {
-  margin: 1em 0;
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1rem;
 }
 
-.half {
-  float: left;
-  width: 50%;
-}
-
-.left {
-  padding-right: .5em;
-}
-
-.right {
-  padding-left: .5em;
+section > img {
+  width: 100%;
 }
 
 .project {
   position: relative;
-  margin-bottom: 1em;
 }
 
-.project .overlay:hover {
+.info {
+  padding: 0 15px;
+  background-color: #f1f1f1;
+  margin-top: -4px; /* why do i need that?*/
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+.cover  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+.project.active .cover {
+  opacity:  0;
+}
+
+.project {
+  min-height: 200px;
+}
+
+.cover:hover {
   opacity: 0;
 }
 
-.collapsible {
-  cursor: pointer;
-}
-
-.title {
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+.cover h2 {
   color: white;
-  font-family: 'futura', Arial, serif;
-  letter-spacing: .1em;
+  position: absolute;
+  font-family: "futura", Arial, serif;
+  letter-spacing: 0.1em;
   text-align: center;
-  top: 50%;
-  left: 50%;
-  font-size: 2.2vw;
-  margin: 0;
+  font-size: 3.5vmin;
   font-weight: 500;
 }
 
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: max-height 0.2s ease-out;
-  transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
+.a .cover {
+  background-color: #1d70b7;
 }
-
-.content p {
-  line-height: 1.4;
+.b .cover {
+  background-color: #e6332a;
 }
-
-footer {
-  display: block;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  text-align: center;
+.c .cover {
+  background-color: #00a09a;
 }
-
-/* 6. Component Styles
-======================================== */
-/* 7. Page Styles
-======================================== */
-/* 8. Media Queries
-======================================== */
-@media (max-width: 720px) {
-  .half {
-    width: 100%;
-    clear: both;
-  }
-  .left,
-  .right {
-    padding: 0;
-  }
-  .right:first-child {
-    margin-top: 0;
-  }
-  .title {
-    font-size: 1.5em;
-  }
-  h1 {
-    font-size: 24px;
-  }
+.d .cover {
+  background-color: #e84e1b;
 }
-/*# sourceMappingURL=style.css.map */
+.e .cover {
+  background-color: #008d36;
+}
+.f .cover {
+  background-color: #f9b233;
+}
