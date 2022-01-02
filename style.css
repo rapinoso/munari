@@ -65,7 +65,7 @@ nav ul {
 }
 nav li {
   display: inline;
-  padding: 0 1rem;
+  padding-left: 1rem;
 }
 
 li a {
