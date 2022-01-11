@@ -10,23 +10,14 @@ main.addEventListener("click", (e) => {
   }
 
   et.parentNode.classList.add("active");
-  console.log("clicked here =>", et);
 
   const infoPanels = document.querySelectorAll(".info");
-  console.log("panels", infoPanels);
   infoPanels.forEach((info) => {
     const img = info.previousElementSibling;
-    console.log(info);
     if (info.dataset.number === et.parentNode.dataset.number) {
       info.style.height = info.scrollHeight + "px";
-      console.log("altura img", img.height);
-      console.log("altura cover", img.previousElementSibling.height)
+      return
     }
-    else {
       info.style.height = null;
-      console.log("altura img", img.height);
-      console.log("altura cover", img.previousElementSibling.height)
-      //img.previousElementSibling.style.maxHeight = img.height;
-    }
   });
 });
