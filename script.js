@@ -13,7 +13,6 @@ main.addEventListener("click", (e) => {
 
   const infoPanels = document.querySelectorAll(".info");
   infoPanels.forEach((info) => {
-    const img = info.previousElementSibling;
     if (info.dataset.number === et.parentNode.dataset.number) {
       info.style.height = info.scrollHeight + "px";
       return
